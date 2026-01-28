@@ -7,7 +7,7 @@ model = YOLO('yolov8s.pt')  # Upgraded to 's' (small) for better 90%+ accuracy
 tracker = DeepSort(max_age=50, n_init=3)
 
 # 2. Load video with 'r' prefix for Windows paths
-video_path = r"D:\Rishika\People-Count-using-YOLOv8-main\Input\VID_20251224_202925_636.mp4"
+video_path = r"video.mp.4"
 cap = cv2.VideoCapture(video_path)
 
 if not cap.isOpened():
@@ -69,4 +69,5 @@ while cap.isOpened():
         break
 
 cap.release()
+
 cv2.destroyAllWindows()
